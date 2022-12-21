@@ -6,11 +6,34 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:58 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/20 19:51:55 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/21 12:49:00 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(int*))
+{
+	if (!lst || !del)
+		return ;
+	del(&lst->content);
+	free(lst);
+}
+
+void	ft_lstclear(t_list **lst, void (*del)(int*))
+{
+	t_list	*temp;
+	t_list	*prev;
+
+	temp = *lst;
+	while (temp)
+	{
+		prev = temp;
+		temp = temp->next;
+		ft_lstdelone(prev, del);
+	}
+	*lst = NULL;
+}
 
 t_list	*ft_lstnew(int content)
 {

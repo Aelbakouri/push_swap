@@ -21,6 +21,7 @@ $(NAME): $(OBJ)
 	@echo "\033[0;32m\n\nCompiling push_swap..."
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 	@echo "\n\033[0mDone !"
+	@rm -f $(OBJ) $(OBJB)
 
 %.o: %.c
 	@printf "\033[0;33mGenerating push_swap objects... %-100.200s\r" $@

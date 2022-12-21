@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/20 19:51:58 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/21 12:49:51 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstnew(int content);
 void		ft_lstadd_back(t_list **lst, t_list *new);
 void		ft_lstadd_front(t_list **lst, t_list *new);
+void		ft_lstdelone(t_list *lst, void (*del)(int*));
+void		ft_lstclear(t_list **lst, void (*del)(int *));
 
 #endif
