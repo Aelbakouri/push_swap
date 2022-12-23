@@ -5,30 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 15:52:10 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/23 14:31:11 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/12/23 14:26:43 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/12/23 14:30:47 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/push_swap.h"
 
-#include "push_swap.h"
-
-/* swap:
-*	Swaps the top 2 elements of a stack.
-*	Does nothing if there is only one or no elements.
-*/
-static void	swap(t_stack *stack)
+static void	swap(t_list *stack)
 {
-	int	tmp;
-
-	if (stack == NULL || stack->next == NULL)
-		return ;
-	tmp = stack->value;
-	stack->value = stack->next->value;
-	stack->next->value = tmp;
-	tmp = stack->index;
-	stack->index = stack->next->index;
-	stack->next->index = tmp;
+	if (ft_lstsize(a) > 1)
+	{
+		int	tmp;
+		tmp = stack->content;
+		stack->content = stack->next->content;
+		stack->next->content = tmp;
+		tmp = stack->index;
+		stack->index = stack->next->index;
+		stack->next->index = tmp;
+	}
 }
 
 /* do_sa:

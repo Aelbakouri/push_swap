@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string_utils.c                                     :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 14:36:50 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/23 14:10:51 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/12/23 14:08:06 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/12/23 14:13:57 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	ft_putstr(char *str)
+static void	push(t_list **src, t_list **dest)
 {
-	int	i;
+	t_list	*tmp;
 
-	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+	if (*src == NULL)
+		return ;
+	tmp = (*src)->next;
+	(*src)->next = *dest;
+	*dest = *src;
+	*src = tmp;
+}
+
+void	pa(t_list **stack_a, t_list **stack_b)
+{
+	push(stack_b, stack_a);
+	ft_putstr("pa\n");
+}
+
+void	pb(t_list **stack_a, t_list **stack_b)
+{
+	push(stack_a, stack_b);
+	ft_putstr("pb\n");
 }

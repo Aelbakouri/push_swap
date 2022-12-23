@@ -6,14 +6,12 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/21 15:46:49 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:24:42 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "../inc/push_swap.h"
+
 
 void	sa(t_list *a)
 {
@@ -45,18 +43,6 @@ void	ss(t_list *a, t_list *b)
 	sb(b);
 }
 
-void	pa(t_list **a, t_list *b)
-{
-	if (b && *a)
-		ft_lstadd_front(a, ft_lstnew(b->content));
-}
-
-void	pb(t_list *a, t_list **b)
-{
-	if (b && a)
-		ft_lstadd_front(b, ft_lstnew(a->content));
-}
-
 void	ra(t_list *a)
 {
 	if (a)
@@ -79,30 +65,31 @@ void	ra(t_list *a)
 
 int main(int ac, char **av)
 {
-	int i = 1;
-	t_list	*a;
-	t_list	*b;
-	t_list	*tmp;
+	(void)ac;
+	(void)av;
+	// int i = 1;
+	// t_list	*a;
+	// t_list	*b;
+	// // t_list	*tmp;
 
-	b = NULL;
-	a = NULL;
-	while (i < ac)
-	{
-		tmp = ft_lstnew(atoi(av[i]));
-		ft_lstadd_back(&a, tmp);
-		i++;
-	}
-	ft_lstadd_back(&b, ft_lstnew(atoi("10")));
-	// pa(&a, b);
-	// sa(a);
-	// ra(a);
+	// b = NULL;
+	// a = NULL;
 
-	// ra(a);
-	while (a)
-	{
-		printf("%d\n", a->content);
-		a = a->next;
-	}
-	(void)b;
-	system("leaks push_swap");
+	if (!is_corr_inp(av))
+		printf("Error:\n");
+	// while (i < ac)
+	// {
+	// 	tmp = ft_lstnew(atoi(av[i]));
+	// 	ft_lstadd_back(&a, tmp);
+	// 	i++;
+	// }
+	// ft_lstadd_back(&b, ft_lstnew(atoi("10")));
+
+	// while (a)
+	// {
+	// 	printf("%d\n", a->content);
+	// 	a = a->next;
+	// }
+	// (void)b;
+	// system("leaks push_swap");
 }
