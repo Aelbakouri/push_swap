@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 15:00:29 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/23 17:23:09 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/25 15:14:50 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static int	is_duplicates(char **av)
 	{
 		j = 0;
 		while (av[++j])
-			if (j != i && !nbstr_cmp(av[i], av[j]))
+			if (j != i && !nb_cmp(av[i], av[j]))
 				return (1);
 	}
 	return (0);

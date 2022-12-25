@@ -6,51 +6,51 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/23 17:24:42 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/25 18:16:51 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
 
-void	sa(t_list *a)
-{
-	if (ft_lstsize(a) > 1)
-	{
-		int tmp;
+// void	sa(t_list *a)
+// {
+// 	if (ft_lstsize(a) > 1)
+// 	{
+// 		int tmp;
 
-		tmp = a->content;
-		a->content = a->next->content;
-		a->next->content = tmp;
-	}
-}
+// 		tmp = a->content;
+// 		a->content = a->next->content;
+// 		a->next->content = tmp;
+// 	}
+// }
 
-void	sb(t_list *b)
-{
-	if (ft_lstsize(b) > 1)
-	{
-		int tmp;
+// void	sb(t_list *b)
+// {
+// 	if (ft_lstsize(b) > 1)
+// 	{
+// 		int tmp;
 
-		tmp = b->content;
-		b->content = b->next->content;
-		b->next->content = tmp;
-	}
-}
+// 		tmp = b->content;
+// 		b->content = b->next->content;
+// 		b->next->content = tmp;
+// 	}
+// }
 
-void	ss(t_list *a, t_list *b)
-{
-	sa(a);
-	sb(b);
-}
+// void	ss(t_list *a, t_list *b)
+// {
+// 	sa(a);
+// 	sb(b);
+// }
 
-void	ra(t_list *a)
-{
-	if (a)
-	{
-		ft_lstadd_back(&a, ft_lstnew(a->content));
-		*a = *a->next;
-	}
-}
+// void	ra(t_list *a)
+// {
+// 	if (a)
+// 	{
+// 		ft_lstadd_back(&a, ft_lstnew(a->content));
+// 		*a = *a->next;
+// 	}
+// }
 
 // void	rb(t_list **b)
 // {
@@ -65,18 +65,29 @@ void	ra(t_list *a)
 
 int main(int ac, char **av)
 {
-	(void)ac;
-	(void)av;
-	// int i = 1;
-	// t_list	*a;
-	// t_list	*b;
-	// // t_list	*tmp;
 
-	// b = NULL;
-	// a = NULL;
+	t_list	*stack_a;
+	t_list	*stack_b;
+	// int		size;
 
 	if (!is_corr_inp(av))
+	{
 		printf("Error:\n");
+		exit(1);
+	}
+	stack_a = fill_stack_content(ac, av);
+	stack_b = NULL;
+	ft_stack_add_back(&stack_b, stack_new(65));
+	ft_stack_add_back(&stack_b, stack_new(16));
+	// size = ft_stack_size(stack_a);
+
+	rrotate(&stack_a);
+
+	while (stack_a)
+	{
+		printf("%d\n", stack_a->content);
+		stack_a = stack_a->next;
+	}
 	// while (i < ac)
 	// {
 	// 	tmp = ft_lstnew(atoi(av[i]));

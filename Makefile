@@ -7,8 +7,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 INC = ./inc/push_swap.h
 
-SRC = ./src/push_swap.c ./src/push_swap_utils.c ./src/string_utils.c ./src/main.c ./src/push.c \
-		./src/check_input_utils.c ./src/check_input.c
+SRC = ./src/string_utils.c ./src/main.c ./src/push.c ./src/init.c ./src/stack.c\
+		./src/check_input_utils.c ./src/check_input.c ./src/rotate.c ./src/rrotate.c
 
 OBJ = $(SRC:c=o)
 

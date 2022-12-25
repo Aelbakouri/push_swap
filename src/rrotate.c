@@ -1,49 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input_utils.c                                :+:      :+:    :+:   */
+/*   rrotate.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 15:51:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/25 14:54:52 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/12/25 17:39:31 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/12/25 18:28:32 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/push_swap.h"
 
-int	is_digit(char c)
+static void	rrotate(t_list **stack)
 {
-	return (c >= '0' && c <= '9');
+	t_list	*tmp;
+	t_list	*bef_last;
+
+	tmp = ft_stack_bottom(*stack);
+	bef_last = ft_stack_before_bottom(*stack);
+	bef_last->next = NULL;
+	tmp->next = *stack;
+	*stack = tmp;
 }
 
-int	is_sign(char c)
+void	rra(t_list **stack_a)
 {
-	return (c == '+' || c == '-');
+	rrotate(stack_a);
+	ft_putstr("rra\n");
 }
 
-int	nb_cmp(const char *s1, const char *s2)
+void	rrb(t_list **stack_b)
 {
-	int	i;
-	int	j;
+	rrotate(stack_b);
+	ft_putstr("rrb\n");
+}
 
-	i = 0;
-	j = i;
-	if (s1[i] == '+')
-	{
-		if (s2[j] != '+')
-			i++;
-	}
-	else
-	{
-		if (s2[j] == '+')
-			j++;
-	}
-	while (s1[i] && s2[j] && s1[i] == s2[j])
-	{
-		i++;
-		j++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
+void	rrr(t_list **stack_a, t_list **stack_b)
+{
+	rra(stack_a);
+	rrb(stack_b);
+	ft_putstr("rrr\n");
 }

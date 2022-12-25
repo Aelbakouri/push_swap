@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/23 18:04:34 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/25 18:33:01 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,41 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+/* initialization */
 
-int			ft_lstsize(t_list *lst);
-t_list		*ft_lstlast(t_list *lst);
-t_list		*ft_lstnew(int content);
-void		ft_lstadd_back(t_list **lst, t_list *new);
-void		ft_lstadd_front(t_list **lst, t_list *new);
-void		ft_lstdelone(t_list *lst, void (*del)(int*));
-void		ft_lstclear(t_list **lst, void (*del)(int *));
+t_list		*fill_stack_content(int ac, char **av);
+
+/* stcak */
+
+t_list		*ft_stack_bottom(t_list *stack);
+t_list		*ft_stack_before_bottom(t_list *stack);
+t_list		*stack_new(int content);
+int			ft_stack_size(t_list	*stack);
+void		ft_stack_add_back(t_list **stack, t_list *new);
+
+/* string utils */
+
 void		ft_putstr(char *str);
+long int	ft_atoi(const char *str);
 
+/* Operations */
+
+void		sa(t_list **stack_a);
+void		sb(t_list **stack_b);
+void		ss(t_list **stack_a, t_list **stack_b);
 void		pa(t_list **stack_a, t_list **stack_b);
 void		pb(t_list **stack_a, t_list **stack_b);
+void		ra(t_list **stack_a);
+void		rb(t_list **stack_b);
+void		rr(t_list **stack_a, t_list **stack_b);
+void		rra(t_list **stack_a);
+void		rrb(t_list **stack_b);
+void		rrr(t_list **stack_a, t_list **stack_b);
+/* input check */
+
 int			is_corr_inp(char **av);
 int			is_digit(char c);
 int			is_sign(char c);
-int			nbstr_cmp(const char *s1, const char *s2);
-long int	ft_atoi(const char *str);
+int			nb_cmp(const char *s1, const char *s2);
 
 #endif

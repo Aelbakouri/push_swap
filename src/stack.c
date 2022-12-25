@@ -6,12 +6,12 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:52:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/23 18:28:29 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/25 14:51:46 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
+ 
 
 t_list	*ft_stack_bottom(t_list *stack)
 {

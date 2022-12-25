@@ -1,49 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_input_utils.c                                :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 15:51:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/25 14:54:52 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/12/25 15:24:13 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/12/25 17:06:37 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/push_swap.h"
 
-int	is_digit(char c)
+static void	rotate(t_list **stack)
 {
-	return (c >= '0' && c <= '9');
+	t_list	*tmp;
+	t_list	*last;
+
+	tmp = *stack;
+	*stack = (*stack)->next;
+	last = ft_stack_bottom(*stack);
+	tmp->next = NULL;
+	last->next = tmp;
 }
 
-int	is_sign(char c)
+void	ra(t_list **stack_a)
 {
-	return (c == '+' || c == '-');
+	rotate(stack_a);
+	ft_putstr("ra\n");
 }
 
-int	nb_cmp(const char *s1, const char *s2)
+void	rb(t_list **stack_b)
 {
-	int	i;
-	int	j;
+	rotate(stack_b);
+	ft_putstr("rb\n");
+}
 
-	i = 0;
-	j = i;
-	if (s1[i] == '+')
-	{
-		if (s2[j] != '+')
-			i++;
-	}
-	else
-	{
-		if (s2[j] == '+')
-			j++;
-	}
-	while (s1[i] && s2[j] && s1[i] == s2[j])
-	{
-		i++;
-		j++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
+void	rr(t_list **stack_a, t_list **stack_b)
+{
+	ra(stack_a);
+	rb(stack_b);
+	ft_putstr("rr\n");
 }
