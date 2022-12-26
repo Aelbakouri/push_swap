@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/25 18:16:51 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:38:13 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,26 +68,29 @@ int main(int ac, char **av)
 
 	t_list	*stack_a;
 	t_list	*stack_b;
-	// int		size;
+	int		size;
+
 
 	if (!is_corr_inp(av))
 	{
-		printf("Error:\n");
+		printf("Error\n");
 		exit(1);
 	}
 	stack_a = fill_stack_content(ac, av);
 	stack_b = NULL;
-	ft_stack_add_back(&stack_b, stack_new(65));
-	ft_stack_add_back(&stack_b, stack_new(16));
-	// size = ft_stack_size(stack_a);
+	//ft_stack_add_back(&stack_b, stack_new(65));
+	//ft_stack_add_back(&stack_b, stack_new(16));
+	size = ft_stack_size(stack_a);
 
-	rrotate(&stack_a);
+	// printf("%d\n", size);
+	//rotate(&stack_a);
 
-	while (stack_a)
-	{
-		printf("%d\n", stack_a->content);
-		stack_a = stack_a->next;
-	}
+
+	// while (stack_a)
+	// {
+	// 	printf("%d\n", stack_a->content);
+	// 	stack_a = stack_a->next;
+	// }
 	// while (i < ac)
 	// {
 	// 	tmp = ft_lstnew(atoi(av[i]));

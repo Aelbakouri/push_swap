@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/25 18:33:01 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:15:33 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void		ft_stack_add_back(t_list **stack, t_list *new);
 
 void		ft_putstr(char *str);
 long int	ft_atoi(const char *str);
+char		**ft_split(char *str, char sep);
 
 /* Operations */
 
