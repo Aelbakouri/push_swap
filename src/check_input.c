@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 15:00:29 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/26 17:42:31 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/26 18:26:30 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,9 @@
 int	arg_is_nb(char *arg)
 {
 	int	i;
-	char	**tab;
 
 	i = 0;
-	tab = ft_split(arg, ' ');
-	while ()
-	if (is_sign(tab[i]) && tab[i + 1] != '\0')
+	if (is_sign(arg[i]) && arg[i + 1] != '\0')
 		i++;
 	while (arg[i] && is_digit(arg[i]))
 		i++;

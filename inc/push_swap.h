@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/26 17:15:33 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/26 19:15:09 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_list
 /* initialization */
 
 t_list		*fill_stack_content(int ac, char **av);
+void		assign_index(t_list *stack_a, int stack_size);
 
 /* stcak */
 
@@ -48,6 +49,8 @@ void		ft_stack_add_back(t_list **stack, t_list *new);
 void		ft_putstr(char *str);
 long int	ft_atoi(const char *str);
 char		**ft_split(char *str, char sep);
+size_t		ft_strlen(const char *str);
+char		*ft_strjoin(char *s1, char *s2);
 
 /* Operations */
 
