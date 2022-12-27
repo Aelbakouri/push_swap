@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:51:42 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/21 15:51:43 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/27 18:35:15 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,15 +89,14 @@ int	get_lowest_index_position(t_stack **stack)
 *		16 < 20					: no update! target_pos = INT_MAX
 *		4  < 20					: no update! target_pos = INT_MAX
 *		3  < 20					: no update! target_pos = INT_MAX
-*	... target_pos stays at INT MAX, need to switch strategies.
+*		target_pos stays at INT MAX, need to switch strategies.
 *		16 < 20					: target_pos updated to 20
 *		4  < 20					: target_pos updated to 4
 *		3  < 20					: target_pos updated to 3
 *	So target_pos needs to be the position of index 3, since that is
 *	the "end" of the stack.
 */
-static int	get_target(t_stack **a, int b_idx,
-								int target_idx, int target_pos)
+static int	get_target(t_stack **a, int b_idx, int target_idx, int target_pos)
 {
 	t_stack	*tmp_a;
 
