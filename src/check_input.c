@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 15:00:29 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/26 18:26:30 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:01:18 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,22 @@ static int	is_zero(char *av)
 	if (av[i])
 		return (0);
 	return (1);
+}
+
+int is_empty(char *av)
+{
+	int	i;
+
+	i = 0;
+	if (!av[i])
+		return (0);
+	while (av[i])
+	{
+		if (av[i] != ' ')
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
 static int	is_duplicates(char **av)
@@ -73,7 +89,7 @@ int	is_corr_inp(char **av)
 		return (0);
 	while (av[++i])
 	{
-		if (!arg_is_nb(av[i]))
+		if (!arg_is_nb(av[i]) || !is_empty(av[i]))
 			return (0);
 		nb_zero += is_zero(av[i]);
 	}
@@ -86,5 +102,5 @@ int	is_corr_inp(char **av)
 // {
 // 	(void)ac;
 
-// 	printf ("%d\n", is_corr_inp(av));
+// 	printf ("%d\n", is_empty(av[1]));
 // }

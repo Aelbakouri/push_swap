@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/26 19:15:09 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:01:43 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void		ft_stack_add_back(t_list **stack, t_list *new);
 
 void		ft_putstr(char *str);
 long int	ft_atoi(const char *str);
-char		**ft_split(char *str, char sep);
+char		**ft_split(char *str, char sep, int *size);
 size_t		ft_strlen(const char *str);
 char		*ft_strjoin(char *s1, char *s2);
 
@@ -68,6 +68,7 @@ void		rrr(t_list **stack_a, t_list **stack_b);
 /* input check */
 
 int			is_corr_inp(char **av);
+int			is_empty(char *av);
 int			is_digit(char c);
 int			is_sign(char c);
 int			nb_cmp(const char *s1, const char *s2);

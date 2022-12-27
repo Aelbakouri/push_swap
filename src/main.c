@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/26 20:31:00 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:26:58 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,35 +63,54 @@
 // 	*swaped = *swaped->next;
 // }
 
+char	**fill_tab(char **av, int *size)
+{
+	int	i;
+	char	*join;
+	char	**tab;
+
+	i = 1;
+	join = NULL;
+	while (av[i])
+	{
+		if (!is_empty(av[i]))
+		{
+			printf("empty\n");
+			return (0);
+		}
+		join = ft_strjoin(join, av[i]);
+		i++;
+	}
+	tab = ft_split(join, ' ', size);
+	return (tab);
+}
+
 int main(int ac, char **av)
 {
 
 	t_list	*stack_a;
 	t_list	*stack_b;
 	int		size;
-	char	*join;
+
 	char	**tab;
 
-	size = 0;
-	while (av[++size])
-		join = ft_strjoin(join, av[size]);
-	tab = ft_split(join, ' ');
+	tab = fill_tab(av, &size);
 	if (!is_corr_inp(tab))
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	stack_a = fill_stack_content(ac, tab);
+	stack_a = fill_stack_content(size, tab);
 	stack_b = NULL;
 	size = ft_stack_size(stack_a);
 	assign_index(stack_a, size + 1);
-	//ft_stack_add_back(&stack_b, stack_new(65));
-	//ft_stack_add_back(&stack_b, stack_new(16));
-	while (stack_a)
-	{
-		printf("%d\n", stack_a->index);
-		stack_a = stack_a->next;
-	}
+	ft_stack_add_back(&stack_b, stack_new(65));
+	ft_stack_add_back(&stack_b, stack_new(16));
+	// while (stack_a)
+	// {
+	// 	printf("%d\n", stack_a->index);
+	// 	stack_a = stack_a->next;
+	// }
 	// while (i < ac)
 	// {
 	// 	tmp = ft_lstnew(atoi(av[i]));
@@ -105,6 +124,6 @@ int main(int ac, char **av)
 	// 	printf("%d\n", a->content);
 	// 	a = a->next;
 	// }
-	// (void)b;
 	// system("leaks push_swap");
+	(void)ac;
 }

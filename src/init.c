@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:34:19 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/26 19:14:10 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/27 15:44:05 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,35 @@
 
 t_list	*fill_stack_content(int ac, char **av)
 {
-	int		i;
-	t_list	*stack;
-	long	nb;
+	t_list		*stack_a;
+	long int	nb;
+	int			i;
 
+	stack_a = NULL;
+	nb = 0;
 	i = 0;
-	stack = NULL;
-	stack = NULL;
-	while (ac >= i)
+	while (i < ac)
 	{
 		nb = ft_atoi(av[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
-		{
 			printf("invalid number");
-			return NULL;
-		}
 		if (i == 0)
-			stack = stack_new((int)nb);
+			stack_a = stack_new((int)nb);
 		else
-			ft_stack_add_back(&stack, stack_new((int )nb));
+			ft_stack_add_back(&stack_a, stack_new((int)nb));
 		i++;
 	}
-	return (stack);
+	return (stack_a);
 }
 
-void	assign_index(t_list *stack_a, int stack_size)
+void	assign_index(t_list *stack_a, int size)
 {
 	t_list	*ptr;
 	t_list	*highest;
 	int		content;
+		// int i = 0;
 
-	while (--stack_size > 0)
+	while (--size > 0)
 	{
 		ptr = stack_a;
 		content = INT_MIN;
@@ -63,6 +61,9 @@ void	assign_index(t_list *stack_a, int stack_size)
 				ptr = ptr->next;
 		}
 		if (highest != NULL)
-			highest->index = stack_size;
+		{
+				highest->index = size;
+			// printf("i == %d\t index = %d\t content == %d\n", i++, highest->index, highest->content);
+		}
 	}
 }

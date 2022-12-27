@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:50 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/26 18:47:58 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/27 14:28:04 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	*str_ndup(char *str, unsigned int n)
 	return (s);
 }
 
-char	**ft_split(char *str, char sep)
+char	**ft_split(char *str, char sep, int *size)
 {
 	char	**tab;
 	int		count;
@@ -86,6 +86,7 @@ char	**ft_split(char *str, char sep)
 		tab[i++] = str_ndup(str, j);
 		str = str + j;
 	}
+	*size = i;
 	tab[i] = NULL;
 	return (tab);
 }
