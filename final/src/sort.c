@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:10:55 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 16:00:24 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 22:24:54 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	push_and_save_three(t_list **stack_a, t_list **stack_b)
 		pushed++;
 	}
 }
-
 
 /* shift_stack:
 *	After the bulk of the stack is sorted, shifts stack a until the lowest

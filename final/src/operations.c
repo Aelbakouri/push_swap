@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:34:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 18:42:52 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 22:25:25 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ void	push(t_list **src, t_list **dest, char *str)
 
 void	swap(t_list *stack, char *str)
 {
+	int	tmp;
+
 	if (ft_stack_size(stack) > 1)
 	{
-		int	tmp;
 		tmp = stack->content;
 		stack->content = stack->next->content;
 		stack->next->content = tmp;

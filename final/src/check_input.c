@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 15:00:29 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/27 15:01:18 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 22:22:12 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	is_zero(char *av)
 	return (1);
 }
 
-int is_empty(char *av)
+int	is_empty(char *av)
 {
 	int	i;
 
@@ -58,7 +58,6 @@ int is_empty(char *av)
 
 static int	is_duplicates(char **av)
 {
-
 	int	i;
 	int	j;
 

@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../inc/push_swap.h"
 
 static void	rev_rotate_both(t_list**a, t_list**b,

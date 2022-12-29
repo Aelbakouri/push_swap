@@ -6,10 +6,9 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:51:42 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 15:26:52 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 22:24:14 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../inc/push_swap.h"
 
@@ -131,11 +130,6 @@ static int	get_target(t_list **a, int b_idx, int target_idx, int target_pos)
 *	get to in order to be sorted correctly. This position will
 *	be used to calculate the cost of moving each element to
 *	its target position in stack A.
-this maybe unnecessary to do for now because that function is called from the stack function itself
-so for now we just assume that the target posision are is correct
-and get the cost of moving each element to its target postion position in
-diferrent stack a little bit higher than the cost of moving each element to its target position in stack a little higher than
-the cost of moving
 */
 void	target_position(t_list **a, t_list **b)
 {

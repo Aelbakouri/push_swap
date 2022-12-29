@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 18:45:40 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 22:16:58 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void	assign_index(t_list *stack_a, int size)
 	t_list	*ptr;
 	t_list	*highest;
 	int		content;
-		// int i = 0;
 
 	while (--size > 0)
 	{
@@ -86,36 +85,11 @@ void	assign_index(t_list *stack_a, int size)
 	}
 }
 
-
-static char	**fill_tab(char **av, int *size)
+int	main(int ac, char **av)
 {
-	int	i;
-	char	*join;
-	char	**tab;
-
-	i = 1;
-	join = NULL;
-	while (av[i])
-	{
-		if (!is_empty(av[i]))
-		{
-			printf("empty param\n");
-			exit(1);
-		}
-		join = ft_strjoin(join, av[i]);
-		i++;
-	}
-	tab = ft_split(join, ' ', size);
-	return (tab);
-}
-
-int main(int ac, char **av)
-{
-
 	t_list	*stack_a;
 	t_list	*stack_b;
 	int		size;
-
 	char	**tab;
 
 	tab = fill_tab(av, &size);

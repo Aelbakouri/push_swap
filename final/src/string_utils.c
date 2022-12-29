@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:50 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 18:46:19 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 22:12:26 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,30 +22,6 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-}
-
-long int	ft_atoi(const char *str)
-{
-	long int	nb;
-	int			isneg;
-	int			i;
-
-	nb = 0;
-	isneg = 1;
-	i = 0;
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
-	{
-		isneg *= -1;
-		i++;
-	}
-	while (is_digit(str[i]))
-	{
-		nb = (nb * 10) + (str[i] - '0');
-		i++;
-	}
-	return (nb * isneg);
 }
 
 char	*str_ndup(char *str, unsigned int n)
@@ -65,7 +41,6 @@ char	**ft_split(char *str, char sep, int *size)
 {
 	char	**tab;
 	int		count;
-	int		i;
 	int		j;
 
 	count = 0;
@@ -76,18 +51,17 @@ char	**ft_split(char *str, char sep, int *size)
 			count++;
 	tab = malloc(sizeof(char *) * (count + 1));
 	*size = 0;
-	while (i < count)
+	while (*(size) < count)
 	{
 		j = 0;
 		while (*str && *str == sep)
 			str++;
 		while (str[j] && str[j] != sep)
 			j++;
-		tab[i++] = str_ndup(str, j);
+		tab[(*size)++] = str_ndup(str, j);
 		str = str + j;
 	}
-	*size = i;
-	tab[i] = NULL;
+	tab[*size] = NULL;
 	return (tab);
 }
 
