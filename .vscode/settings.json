@@ -1,9 +1,11 @@
 {
-	"C_Cpp.errorSquiggles": "disabled",
-	"files.associations": {
-		"array": "c",
-		"string_view": "c",
-		"initializer_list": "c",
-		"utility": "c"
-	}
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+    "*.conf": "bat",
+    "array": "c",
+    "string_view": "c",
+    "initializer_list": "c",
+    "utility": "c",
+    "push_swap.h": "c"
+  }
 }

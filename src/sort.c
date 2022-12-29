@@ -6,13 +6,13 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:10:55 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/28 14:19:28 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 11:46:44 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
- void	push_and_save_three(t_list **stack_a, t_list **stack_b)
+void	push_and_save_three(t_list **stack_a, t_list **stack_b)
 {
 	int	stack_size;
 	int	pushed;
