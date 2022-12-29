@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/27 15:01:43 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/28 14:17:35 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,11 @@ typedef struct s_list
 	int				cost_b;
 	struct s_list	*next;
 }	t_list;
+
+/* push_swap */
+int			stack_is_sorted(t_list *stack);
+void		sort_tree(t_list **stack);
+void	push_and_save_three(t_list **stack_a, t_list **stack_b);
 
 /* initialization */
 

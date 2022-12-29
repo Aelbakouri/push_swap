@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/27 15:26:58 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/28 14:28:16 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,17 @@
 // 	*swaped = *swaped->next;
 // }
 
+int	stack_is_sorted(t_list *stack)
+{
+	while (stack->next)
+	{
+		if (stack->content > stack->next->content)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
+
 char	**fill_tab(char **av, int *size)
 {
 	int	i;
@@ -104,8 +115,9 @@ int main(int ac, char **av)
 	stack_b = NULL;
 	size = ft_stack_size(stack_a);
 	assign_index(stack_a, size + 1);
-	ft_stack_add_back(&stack_b, stack_new(65));
-	ft_stack_add_back(&stack_b, stack_new(16));
+	// ft_stack_add_back(&stack_b, stack_new(65));
+	// ft_stack_add_back(&stack_b, stack_new(16));
+	push_and_save_three(&stack_a, &stack_b);
 	// while (stack_a)
 	// {
 	// 	printf("%d\n", stack_a->index);

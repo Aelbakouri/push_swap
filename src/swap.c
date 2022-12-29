@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 14:26:43 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/25 18:30:39 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/28 14:25:00 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	swap(t_list *stack)
 {
-	if (ft_lstsize(a) > 1)
+	if (ft_stack_size(stack) > 1)
 	{
 		int	tmp;
 		tmp = stack->content;
