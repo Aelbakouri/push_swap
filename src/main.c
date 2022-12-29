@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 11:40:00 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:09:10 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,18 @@ int	stack_is_sorted(t_list *stack)
 	return (1);
 }
 
-char	**fill_tab(char **av, int *size)
+static void	push_swap(t_list **stack_a, t_list **stack_b, int stack_size)
+{
+	if (stack_size == 2 && !stack_is_sorted(*stack_a))
+		sa(stack_a);
+	else if (stack_size == 3)
+		sort_tree(stack_a);
+	else if (stack_size > 3 && !stack_is_sorted(*stack_a))
+		sort(stack_a, stack_b);
+}
+
+
+static char	**fill_tab(char **av, int *size)
 {
 	int	i;
 	char	*join;
@@ -35,8 +46,8 @@ char	**fill_tab(char **av, int *size)
 	{
 		if (!is_empty(av[i]))
 		{
-			printf("empty\n");
-			return (0);
+			printf("empty param\n");
+			exit(1);
 		}
 		join = ft_strjoin(join, av[i]);
 		i++;
@@ -64,12 +75,14 @@ int main(int ac, char **av)
 	stack_b = NULL;
 	size = ft_stack_size(stack_a);
 	assign_index(stack_a, size + 1);
+	ft_stack_before_bottom(stack_b);
 	push_and_save_three(&stack_a, &stack_b);
-	// while (stack_b)
-	// {
-	// 	printf("%d\n", stack_b->content);
-	// 	stack_b = stack_b->next;
-	// }
+	push_swap(&stack_a, &stack_b, size);
+	while (stack_a)
+	{
+		printf("%d\n", stack_a->content);
+		stack_a = stack_a->next;
+	}
 	// while (i < ac)
 	// {
 	// 	tmp = ft_lstnew(atoi(av[i]));
