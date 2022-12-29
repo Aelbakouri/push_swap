@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:51:42 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 14:36:42 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:26:52 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void	get_position(t_list **stack)
 *	Gets the current position of the element with the lowest index
 *	within a stack.
 */
-int	get_lowest_index_position(t_list **stack)
+int	lowest_index_position(t_list **stack)
 {
 	t_list	*tmp;
 	int		lowest_index;
@@ -135,9 +135,9 @@ this maybe unnecessary to do for now because that function is called from the st
 so for now we just assume that the target posision are is correct
 and get the cost of moving each element to its target postion position in
 diferrent stack a little bit higher than the cost of moving each element to its target position in stack a little higher than
-the cost of moving 
+the cost of moving
 */
-void	get_target_position(t_list **a, t_list **b)
+void	target_position(t_list **a, t_list **b)
 {
 	t_list	*tmp_b;
 	int		target_pos;

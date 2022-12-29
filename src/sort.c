@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:10:55 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 15:12:39 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 16:00:24 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	shift_stack(t_list **stack_a)
 	int	stack_size;
 
 	stack_size = ft_stack_size(*stack_a);
-	lowest_pos = get_lowest_index_position(stack_a);
+	lowest_pos = lowest_index_position(stack_a);
 	if (lowest_pos > stack_size / 2)
 	{
 		while (lowest_pos < stack_size)
@@ -84,10 +84,10 @@ void	sort(t_list **stack_a, t_list **stack_b)
 	sort_tree(stack_a);
 	while (*stack_b)
 	{
-		get_target_position(stack_a, stack_b);
+		target_position(stack_a, stack_b);
 		get_cost(stack_a, stack_b);
 		cheapest_move(stack_a, stack_b);
 	}
-	if (!is_sorted(*stack_a))
+	if (!stack_is_sorted(*stack_a))
 		shift_stack(stack_a);
 }

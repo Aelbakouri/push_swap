@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:34:19 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/27 15:44:05 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:45:08 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,6 @@ void	assign_index(t_list *stack_a, int size)
 				ptr = ptr->next;
 		}
 		if (highest != NULL)
-		{
 				highest->index = size;
-			// printf("i == %d\t index = %d\t content == %d\n", i++, highest->index, highest->content);
-		}
 	}
 }

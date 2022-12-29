@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 15:09:10 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 16:03:59 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,26 +76,12 @@ int main(int ac, char **av)
 	size = ft_stack_size(stack_a);
 	assign_index(stack_a, size + 1);
 	ft_stack_before_bottom(stack_b);
-	push_and_save_three(&stack_a, &stack_b);
 	push_swap(&stack_a, &stack_b, size);
 	while (stack_a)
 	{
 		printf("%d\n", stack_a->content);
 		stack_a = stack_a->next;
 	}
-	// while (i < ac)
-	// {
-	// 	tmp = ft_lstnew(atoi(av[i]));
-	// 	ft_lstadd_back(&a, tmp);
-	// 	i++;
-	// }
-	// ft_lstadd_back(&b, ft_lstnew(atoi("10")));
-
-	// while (a)
-	// {
-	// 	printf("%d\n", a->content);
-	// 	a = a->next;
-	// }
 	system("leaks push_swap");
 	(void)ac;
 }

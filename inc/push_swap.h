@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 15:13:21 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:51:18 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,11 @@ int			stack_is_sorted(t_list *stack);
 void		sort_tree(t_list **stack);
 void		push_and_save_three(t_list **stack_a, t_list **stack_b);
 void		sort(t_list **stack_a, t_list **stack_b);
+void		get_cost(t_list **stack_a, t_list **stack_b);
+void		cheapest_move(t_list **stack_a, t_list **stack_b);
+int			lowest_index_position(t_list **stack);
+void		target_position(t_list **a, t_list **b);
+void		move(t_list **a, t_list **b, int cost_a, int cost_b);
 
 /* initialization */
 
@@ -57,6 +62,13 @@ long int	ft_atoi(const char *str);
 char		**ft_split(char *str, char sep, int *size);
 size_t		ft_strlen(const char *str);
 char		*ft_strjoin(char *s1, char *s2);
+
+/* ultils */
+
+void		free_stack(t_list **stack);
+void		exit_error(t_list **stack_a, t_list **stack_b);
+long int	ft_atoi(const char *str);
+int			nb_abs(int nb);
 
 /* Operations */
 
