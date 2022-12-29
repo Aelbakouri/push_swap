@@ -1,7 +1,0 @@
-<-- first -->
-a = 1 2 5 89 34 -5
-b = null
-
-pb: brings top of a and put it in top of b
-pa: brings top of b and put it in top of a
-<-- second -->
