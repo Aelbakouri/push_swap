@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 18:29:46 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:39:29 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,19 @@ void		free_stack(t_list **stack);
 void		exit_error(t_list **stack_a, t_list **stack_b);
 long int	ft_atoi(const char *str);
 int			nb_abs(int nb);
+char		**fill_tab(char **av, int *size, int ac);
 
 
 /* Operations */
 
-void		swap(t_list *stack, char *str);
+void		swap(t_list **stack, char *str);
 void		ss(t_list **stack_a, t_list **stack_b);
 void		push(t_list **src, t_list **dest, char *str);
 void		rotate(t_list **stack, char *str);
 void		rr(t_list **stack_a, t_list **stack_b);
 void		rrotate(t_list **stack, char *str);
 void		rrr(t_list **stack_a, t_list **stack_b);
+
 /* input check */
 
 int			is_corr_inp(char **av);

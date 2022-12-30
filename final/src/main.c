@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 22:16:58 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:39:12 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	stack_is_sorted(t_list *stack)
 static void	push_swap(t_list **stack_a, t_list **stack_b, int stack_size)
 {
 	if (stack_size == 2 && !stack_is_sorted(*stack_a))
-		sa(stack_a);
+		swap(stack_a, "sa");
 	else if (stack_size == 3)
 		sort_tree(stack_a);
 	else if (stack_size > 3 && !stack_is_sorted(*stack_a))
@@ -92,12 +92,9 @@ int	main(int ac, char **av)
 	int		size;
 	char	**tab;
 
-	tab = fill_tab(av, &size);
+	tab = fill_tab(av, &size, ac);
 	if (!is_corr_inp(tab))
-	{
-		printf("Error\n");
-		exit(1);
-	}
+		exit_error(NULL, NULL);
 	stack_a = fill_stack_content(size, tab);
 	stack_b = NULL;
 	size = ft_stack_size(stack_a);
@@ -106,6 +103,4 @@ int	main(int ac, char **av)
 	push_swap(&stack_a, &stack_b, size);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
-	system("leaks push_swap");
-	(void)ac;
 }

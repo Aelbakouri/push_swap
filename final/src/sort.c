@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:10:55 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 22:32:38 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/30 17:00:47 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ void	sort_tree(t_list **stack)
 		return ;
 	highest = highest_index(*stack);
 	if ((*stack)->index == highest)
-		ra(stack);
+		rotate(stack, "ra");
 	else if ((*stack)->next->index == highest)
-		rra(stack);
+		rrotate(stack, "rra");
 	if ((*stack)->index > (*stack)->next->index)
-		sa(stack);
+		swap(stack, "sa");
 }
 
 /*end*/
@@ -56,16 +56,16 @@ void	push_and_save_three(t_list **stack_a, t_list **stack_b)
 	{
 		if ((*stack_a)->index <= stack_size / 2)
 		{
-			pb(stack_a, stack_b);
+			push(stack_a, stack_b, "pb");
 			pushed++;
 		}
 		else
-			ra(stack_a);
+			rotate(stack_a, "ra");
 		i++;
 	}
 	while (stack_size - pushed > 3)
 	{
-		pb(stack_a, stack_b);
+		push(stack_a, stack_b, "pb");
 		pushed++;
 	}
 }
@@ -87,7 +87,7 @@ static void	shift_stack(t_list **stack_a)
 	{
 		while (lowest_pos < stack_size)
 		{
-			rra(stack_a);
+			rrotate(stack_a, "rra");
 			lowest_pos++;
 		}
 	}
@@ -95,7 +95,7 @@ static void	shift_stack(t_list **stack_a)
 	{
 		while (lowest_pos > 0)
 		{
-			ra(stack_a);
+			rotate(stack_a, "ra");
 			lowest_pos--;
 		}
 	}

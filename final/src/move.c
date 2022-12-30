@@ -39,12 +39,12 @@ static void	rotate_a(t_list **a, int *cost)
 	{
 		if (*cost > 0)
 		{
-			ra(a);
+			rotate(a, "ra");
 			(*cost)--;
 		}
 		else if (*cost < 0)
 		{
-			rra(a);
+			rrotate(a, "rra");
 			(*cost)++;
 		}
 	}
@@ -56,12 +56,12 @@ static void	rotate_b(t_list **b, int *cost)
 	{
 		if (*cost > 0)
 		{
-			rb(b);
+			rotate(b, "rb");
 			(*cost)--;
 		}
 		else if (*cost < 0)
 		{
-			rrb(b);
+			rrotate(b, "rrb");
 			(*cost)++;
 		}
 	}
@@ -75,5 +75,5 @@ void	move(t_list **a, t_list **b, int cost_a, int cost_b)
 		rotate_both(a, b, &cost_a, &cost_b);
 	rotate_a(a, &cost_a);
 	rotate_b(b, &cost_b);
-	pa(a, b);
+	push(b, a, "pa");
 }

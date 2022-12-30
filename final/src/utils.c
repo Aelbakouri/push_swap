@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:52:15 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 22:24:39 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:38:27 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	nb_abs(int nb)
 	return (nb);
 }
 
-static char	**fill_tab(char **av, int *size)
+char	**fill_tab(char **av, int *size, int ac)
 {
 	int		i;
 	char	*join;
@@ -61,13 +61,12 @@ static char	**fill_tab(char **av, int *size)
 
 	i = 1;
 	join = NULL;
+	if (av[i] == NULL || ac <= 1)
+		exit(0);
 	while (av[i])
 	{
 		if (!is_empty(av[i]))
-		{
-			printf("empty param\n");
-			exit(1);
-		}
+			exit_error(NULL, NULL);
 		join = ft_strjoin(join, av[i]);
 		i++;
 	}

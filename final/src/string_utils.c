@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:50 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 22:12:26 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/30 13:46:18 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@ void	ft_putstr(char *str)
 {
 	int	i;
 
-	i = 0;
-	while (str[i])
-	{
+	i = -1;
+	while (str[++i])
 		write(1, &str[i], 1);
-		i++;
-	}
+	write(1, "\n", 1);
 }
 
 char	*str_ndup(char *str, unsigned int n)
