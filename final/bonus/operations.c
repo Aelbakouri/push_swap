@@ -6,11 +6,11 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:34:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 15:16:02 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 17:32:17 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "push_swap_bonus.h"
 
 void	push(t_list **src, t_list **dest, char *str)
 {
@@ -22,7 +22,8 @@ void	push(t_list **src, t_list **dest, char *str)
 	(*src)->next = *dest;
 	*dest = *src;
 	*src = tmp;
-	ft_putstr(str);
+	if (str)
+		ft_putstr(str);
 }
 
 void	swap(t_list **stack, char *str)
@@ -46,7 +47,6 @@ void	ss(t_list **stack_a, t_list **stack_b)
 {
 	swap(stack_a, 0);
 	swap(stack_b, 0);
-	ft_putstr("ss\n");
 }
 
 void	rotate(t_list **stack, char *str)
@@ -67,5 +67,4 @@ void	rr(t_list **stack_a, t_list **stack_b)
 {
 	rotate(stack_a, 0);
 	rotate(stack_b, 0);
-	ft_putstr("rr\n");
 }

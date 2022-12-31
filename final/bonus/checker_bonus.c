@@ -6,13 +6,13 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:16:12 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/30 18:43:19 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 17:37:00 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "push_swap_bonus.h"
 
-int	get_next_line(char **line)
+static int	get_next_line(char **line)
 {
 	char	*buffer;
 	int		i;
@@ -24,7 +24,6 @@ int	get_next_line(char **line)
 	buffer = (char *)malloc(10000);
 	if (!buffer)
 		return (-1);
-	write(0, "-------> ", 10);
 	r = read(0, &c, 1);
 	while (r && r != -1 && c != '\n' && c != '\0')
 	{
@@ -37,41 +36,30 @@ int	get_next_line(char **line)
 	return (r);
 }
 
-void	write_a(t_list *a, t_list *b, char *line)
+t_list	*fill_stack_content(int ac, char **av)
 {
-	if (!ft_strncmp(line, "pa\n", 3))
-		push_a(a, b);
-	else if (!ft_strncmp(line, "ra\n", 3))
-		rotate_a(a);
-	else if (!ft_strncmp(line, "rra\n", 4))
-		reverse_rotate_a(a);
-	else
-		swap_a(a);
+	t_list		*stack_a;
+	long int	nb;
+	int			i;
+
+	stack_a = NULL;
+	nb = 0;
+	i = 0;
+	while (i < ac)
+	{
+		nb = ft_atoi(av[i]);
+		if (nb > INT_MAX || nb < INT_MIN)
+			printf("invalid number");
+		if (i == 0)
+			stack_a = stack_new((int)nb);
+		else
+			ft_stack_add_back(&stack_a, stack_new((int)nb));
+		i++;
+	}
+	return (stack_a);
 }
 
-void	write_b(t_list *a, t_list *b, char *line)
-{
-	if (!ft_strncmp(line, "pb\n", 3))
-		push_b(a, b);
-	else if (!ft_strncmp(line, "rb\n", 3))
-		rotate_b(b);
-	else if (!ft_strncmp(line, "rrb\n", 4))
-		reverse_rotate_b(b);
-	else
-		swap_b(b);
-}
-
-void	write_d(t_list *a, t_list *b, char *line)
-{
-	if (!ft_strncmp(line, "rr\n", 3))
-		rr(a, b);
-	else if (!ft_strncmp(line, "ss\n", 3))
-		ss(a, b);
-	else
-		reverse_rr(a, b);
-}
-
-void	checker(t_list *a, t_list *b)
+static void	checker(t_list **a, t_list **b)
 {
 	char	*line;
 
@@ -79,18 +67,16 @@ void	checker(t_list *a, t_list *b)
 	{
 		if (!line)
 			break ;
-		if (!ft_strncmp(line, "pa\n", 3) || !ft_strncmp(line, "ra\n", 3)
-			|| !ft_strncmp(line, "rra\n", 4) || !ft_strncmp(line, "sa\n", 3))
-			write_a(a, b, line);
-		else if (!ft_strncmp(line, "pb\n", 3) || !ft_strncmp(line, "rb\n", 3)
-			|| !ft_strncmp(line, "rrb\n", 4) || !ft_strncmp(line, "sb\n", 3))
-			write_b(a, b, line);
-		else if (!ft_strncmp(line, "rr\n", 3) || !ft_strncmp(line, "rrr\n", 4)
-			|| !ft_strncmp(line, "ss\n", 3))
-			write_d(a, b, line);
+		if (!str_ncmp(line, "sa", 3) || !str_ncmp(line, "sb", 3)
+			|| !str_ncmp(line, "ss", 3) || !str_ncmp(line, "pa", 3)
+			|| !str_ncmp(line, "pb", 3))
+			do_oper_a(a, b, line);
+		else if (!str_ncmp(line, "ra", 3) || !str_ncmp(line, "rb", 3)
+			|| !str_ncmp(line, "rr", 3) || !str_ncmp(line, "rra", 4)
+			|| !str_ncmp(line, "rrb", 4) || !str_ncmp(line, "rrr", 4))
+			do_oper_b(a, b, line);
 		else
-			errore();
-		free(line);
+			exit_error(a, b);
 	}
 }
 
@@ -106,7 +92,11 @@ int	main(int ac, char **av)
 		exit_error(NULL, NULL);
 	stack_a = fill_stack_content(size, tab);
 	stack_b = NULL;
-	checker(stack_a, stack_b);
+	checker(&stack_a, &stack_b);
+	if (stack_is_sorted(stack_a) && !stack_b)
+		write (1, "ok\n", 3);
+	else
+		write (1, "ko\n", 3);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 }

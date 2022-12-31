@@ -6,11 +6,11 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:52:15 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 17:57:18 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 17:32:45 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+#include "push_swap_bonus.h"
 
 void	free_stack(t_list **stack)
 {
@@ -37,11 +37,15 @@ void	exit_error(t_list **stack_a, t_list **stack_b)
 	exit (1);
 }
 
-int	nb_abs(int nb)
+int	stack_is_sorted(t_list *stack)
 {
-	if (nb < 0)
-		return (nb * -1);
-	return (nb);
+	while (stack->next)
+	{
+		if (stack->content > stack->next->content)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }
 
 char	**fill_tab(char **av, int *size, int ac)

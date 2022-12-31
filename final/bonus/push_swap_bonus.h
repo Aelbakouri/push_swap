@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 15:00:27 by ael-bako         ###   ########.fr       */
+/*   Created: 2022/12/31 15:04:42 by ael-bako          #+#    #+#             */
+/*   Updated: 2022/12/31 17:36:19 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include <unistd.h>
 # include <string.h>
@@ -31,7 +31,6 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-/* push_swap */
 int			stack_is_sorted(t_list *stack);
 void		sort_tree(t_list **stack);
 void		push_and_save_three(t_list **stack_a, t_list **stack_b);
@@ -76,7 +75,6 @@ long int	ft_atoi(const char *str);
 int			nb_abs(int nb);
 char		**fill_tab(char **av, int *size, int ac);
 
-
 /* Operations */
 
 void		swap(t_list **stack, char *str);
@@ -86,6 +84,8 @@ void		rotate(t_list **stack, char *str);
 void		rr(t_list **stack_a, t_list **stack_b);
 void		rrotate(t_list **stack, char *str);
 void		rrr(t_list **stack_a, t_list **stack_b);
+void		do_oper_a(t_list **a, t_list **b, char *line);
+void		do_oper_b(t_list **a, t_list **b, char *line);
 
 /* input check */
 
