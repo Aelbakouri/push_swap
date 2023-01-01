@@ -6,11 +6,11 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:52:15 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 17:32:45 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 18:18:24 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_bonus.h"
+#include "../inc/push_swap_bonus.h"
 
 void	free_stack(t_list **stack)
 {

@@ -6,11 +6,11 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:34:26 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 17:32:23 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 18:18:02 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_bonus.h"
+#include "../inc/push_swap_bonus.h"
 
 void	rrotate(t_list **stack, char *str)
 {

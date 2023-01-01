@@ -6,11 +6,11 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:16:12 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 17:37:00 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 18:23:38 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_bonus.h"
+#include "../inc/push_swap_bonus.h"
 
 static int	get_next_line(char **line)
 {

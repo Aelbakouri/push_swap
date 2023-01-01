@@ -6,11 +6,11 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:21:43 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 17:32:40 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 18:18:20 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_bonus.h"
+#include "../inc/push_swap_bonus.h"
 
 int	str_ncmp(char *str1, char *str2, int n)
 {

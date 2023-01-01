@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 15:19:56 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 15:00:27 by ael-bako         ###   ########.fr       */
+/*   Updated: 2022/12/31 18:17:07 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ void		exit_error(t_list **stack_a, t_list **stack_b);
 long int	ft_atoi(const char *str);
 int			nb_abs(int nb);
 char		**fill_tab(char **av, int *size, int ac);
-
 
 /* Operations */
 
