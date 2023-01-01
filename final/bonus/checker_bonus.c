@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:16:12 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 18:23:38 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:49:04 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,9 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	checker(&stack_a, &stack_b);
 	if (stack_is_sorted(stack_a) && !stack_b)
-		write (1, "ok\n", 3);
+		write(1, "OK\n", 3);
 	else
-		write (1, "ko\n", 3);
+		write(1, "KO\n", 3);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 }

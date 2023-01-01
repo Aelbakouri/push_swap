@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:34:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 18:17:58 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/01 17:05:24 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void	rotate(t_list **stack, char *str)
 	t_list	*tmp;
 	t_list	*last;
 
+	if (ft_stack_size(*stack) < 2)
+		return ;
 	tmp = *stack;
 	*stack = (*stack)->next;
 	last = ft_stack_bottom(*stack);

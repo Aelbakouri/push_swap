@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:34:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 15:16:02 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/01 17:05:47 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ss(t_list **stack_a, t_list **stack_b)
 {
 	swap(stack_a, 0);
 	swap(stack_b, 0);
-	ft_putstr("ss\n");
+	ft_putstr("ss");
 }
 
 void	rotate(t_list **stack, char *str)
@@ -54,6 +54,8 @@ void	rotate(t_list **stack, char *str)
 	t_list	*tmp;
 	t_list	*last;
 
+	if (ft_stack_size(*stack) < 2)
+		return ;
 	tmp = *stack;
 	*stack = (*stack)->next;
 	last = ft_stack_bottom(*stack);
@@ -67,5 +69,5 @@ void	rr(t_list **stack_a, t_list **stack_b)
 {
 	rotate(stack_a, 0);
 	rotate(stack_b, 0);
-	ft_putstr("rr\n");
+	ft_putstr("rr");
 }

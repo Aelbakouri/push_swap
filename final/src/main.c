@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 17:57:26 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/01 15:35:07 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_list	*fill_stack_content(int ac, char **av)
 	{
 		nb = ft_atoi(av[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
-			printf("invalid number");
+			exit_error(NULL, NULL);
 		if (i == 0)
 			stack_a = stack_new((int)nb);
 		else
@@ -99,7 +99,6 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	size = ft_stack_size(stack_a);
 	assign_index(stack_a, size + 1);
-	ft_stack_before_bottom(stack_b);
 	push_swap(&stack_a, &stack_b, size);
 	free_stack(&stack_a);
 	free_stack(&stack_b);

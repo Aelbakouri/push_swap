@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:52:15 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/31 18:18:24 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/01 16:44:36 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ void	exit_error(t_list **stack_a, t_list **stack_b)
 
 int	stack_is_sorted(t_list *stack)
 {
+	if (!stack)
+		return (0);
 	while (stack->next)
 	{
 		if (stack->content > stack->next->content)
@@ -66,6 +68,7 @@ char	**fill_tab(char **av, int *size, int ac)
 		i++;
 	}
 	tab = ft_split(join, ' ', size);
+	free(join);
 	return (tab);
 }
 
