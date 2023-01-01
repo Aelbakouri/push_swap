@@ -6,10 +6,9 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:51:38 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/28 13:43:20 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/01 15:30:17 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -29,7 +28,7 @@ int	is_sorted(t_stack *stack)
 }
 
 /* push_swap:
-*	Chooses a sorting method depending on the number
+*	Chooses a sorting meth od depending on the number
 *	of values to be sorted.
 */
 static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
