@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 17:07:23 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/01 17:32:59 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ static char	**fill_tab(char **av, int *size)
 		i++;
 	}
 	tab = ft_split(join, ' ', size);
+	free(join);
 	return (tab);
 }
 
@@ -79,6 +80,5 @@ int main(int ac, char **av)
 	push_swap(&stack_a, &stack_b, size);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
-	system("leaks push_swap");
 	(void)ac;
 }
