@@ -6,22 +6,21 @@
   <!-- <a href="https://1337_cursus.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">1337_cursus</h1>
+<h1 align="center">
+	1337_cursus' push_swap
+</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/{{YOUR_GITHUB_USERNAME}}/1337_cursus?color=56BEB8">
+	<b><i>Development repo for 1337_cursus' push_swap project</i></b><br>
+	For further information about 42cursus and its projects, please refer to <a href="https://github.com/Aelbakouri/1337_cursus"><b>42cursus repo</b></a>.
+</p>
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/{{YOUR_GITHUB_USERNAME}}/1337_cursus?color=56BEB8">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/{{YOUR_GITHUB_USERNAME}}/1337_cursus?color=56BEB8">
-
-  <img alt="License" src="https://img.shields.io/github/license/{{YOUR_GITHUB_USERNAME}}/1337_cursus?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/1337_cursus?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/{{YOUR_GITHUB_USERNAME}}/1337_cursus?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/{{YOUR_GITHUB_USERNAME}}/1337_cursus?color=56BEB8" /> -->
+<p align="center">
+	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Aelbakouri/push_swap?color=blueviolet" />
+	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/Aelbakouri/push_swap?color=blueviolet" />
+	<img alt="Code language count" src="https://img.shields.io/github/languages/count/Aelbakouri/push_swap?color=blue" />
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Aelbakouri/push_swap?color=blue" />
+	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Aelbakouri/push_swap?color=brightgreen" />
 </p>
 
 <!-- Status -->
@@ -44,6 +43,34 @@
 
 <br>
 
+## Directory Hierarchy
+```
+|—— Makefile
+|—— bonus
+|    |—— check_input.c
+|    |—— checker_bonus.c
+|    |—— operations.c
+|    |—— operations2.c
+|    |—— stack.c
+|    |—— string_utils.c
+|    |—— string_utils2.c
+|    |—— utils.c
+|—— inc
+|    |—— push_swap.h
+|    |—— push_swap_bonus.h
+|—— src
+|    |—— check_input.c
+|    |—— main.c
+|    |—— move.c
+|    |—— operations.c
+|    |—— operations2.c
+|    |—— position.c
+|    |—— sort.c
+|    |—— stack.c
+|    |—— string_utils.c
+|    |—— utils.c
+|    |—— utils2.c
+```
 ## :dart: About ##
 
 Describe your project
