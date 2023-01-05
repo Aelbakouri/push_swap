@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:51:38 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/05 13:07:01 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/05 13:09:16 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(int ac, char **av)
 	if (!is_correct_input(av))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
-	stack_a = zfill_stack_values(ac, av);
+	stack_a = fill_stack_values(ac, av);
 	stack_size = get_stack_size(stack_a);
 	assign_index(stack_a, stack_size + 1);
 	push_swap(&stack_a, &stack_b, stack_size);
