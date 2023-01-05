@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:51:28 by ael-bako          #+#    #+#             */
-/*   Updated: 2022/12/29 22:38:32 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/03 11:07:16 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,15 @@ int	nb_cmp(const char *s1, const char *s2)
 	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
 }
 
+/* get_cost:
+*	Calculates the cost of moving each element of stack B into the correct
+*	position in stack A.
+*	Two costs are calculated:
+*		cost_b represents the cost of getting the element to the top of the B stack
+*		cost_a represents the cost of getting to the right position in stack A.
+*	If the element is in the bottom half of the stack, the cost will be negative,
+*	if it is in the top half, the cost is positive.
+*/
 void	get_cost(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp_a;
@@ -70,6 +79,10 @@ void	get_cost(t_list **stack_a, t_list **stack_b)
 	}
 }
 
+/* cheapest_move:
+*	Finds the element in stack B with the cheapest cost to move to stack A
+*	and moves it to the correct position in stack A.
+*/
 void	cheapest_move(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;

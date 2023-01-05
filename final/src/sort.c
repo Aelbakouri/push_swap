@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 14:10:55 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/02 15:10:44 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:51:27 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	sort_tree(t_list **stack)
 		swap(stack, "sa");
 }
 
-/*end*/
+/* end */
 
 void	push_and_save_three(t_list **stack_a, t_list **stack_b)
 {

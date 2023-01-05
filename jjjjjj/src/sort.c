@@ -6,10 +6,9 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:52:02 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/01 18:18:57 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/03 11:01:38 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -85,19 +84,15 @@ static void	shift_stack(t_stack **stack_a)
 */
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
+	t_stack *tmp;
 	push_all_save_three(stack_a, stack_b);
 	tiny_sort(stack_a);
-	while ((*stack_a))
-	{
-		printf("stack_a %d\n", (*stack_a)->value);
-		(*stack_a) = (*stack_a)->next;
-	}
-	while (*stack_b)
-	{
-		get_target_position(stack_a, stack_b);
-		get_cost(stack_a, stack_b);
-		do_cheapest_move(stack_a, stack_b);
-	}
+		while (*stack_b)
+		{
+			get_target_position(stack_a, stack_b);
+			get_cost(stack_a, stack_b);
+			do_cheapest_move(stack_a, stack_b);
+		}
 	if (!is_sorted(*stack_a))
 		shift_stack(stack_a);
 }

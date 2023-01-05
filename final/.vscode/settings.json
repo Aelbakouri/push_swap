@@ -1,0 +1,13 @@
+{
+	"files.associations": {
+		"*.conf": "bat",
+		"__bit_reference": "c",
+		"algorithm": "c",
+		"bitset": "c",
+		"chrono": "c",
+		"set": "c",
+		"unordered_map": "c",
+		"unordered_set": "c",
+		"random": "c"
+	}
+}

@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 14:36:34 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/02 15:01:56 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/03 11:21:19 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,11 +100,6 @@ int	main(int ac, char **av)
 	size = ft_stack_size(stack_a);
 	assign_index(stack_a, size + 1);
 	push_swap(&stack_a, &stack_b, size);
-	while (stack_a)
-	{
-		printf("%d\n", stack_a->content);
-		stack_a = stack_a->next;
-	}
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 }
