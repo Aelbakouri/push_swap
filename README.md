@@ -23,17 +23,9 @@
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Aelbakouri/push_swap?color=brightgreen" />
 </p>
 
-<!-- Status -->
-
-<!-- <h4 align="center">
-	🚧  1337_cursus 🚀 Under construction...  🚧
-</h4>
-
-<hr> -->
-
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0;
-  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#directory-hierarchy">Directory Hierarchy</a> &#xa0; | &#xa0;
   <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
@@ -42,6 +34,27 @@
 </p>
 
 <br>
+
+## Status
+Finished 05/09/2022. Grade: 100%
+
+## Usage
+
+Git clone the repository and cd into it. Then use ```make``` to compile
+
+## About ##
+
+This project is the implementation of Quick Sort program which is made of Stack Sort algorithm. Only 2 stacks and 11 rules enabled to make elements ascending orders.
+
+>### Status:
+     Finished 05/01/2023 grade: 125%
+
+<br>
+
+>### Usage:
+    Git clone the repository and cd into it. Then use ```make``` to compile
+    $ git clone git@github.com:Aelbakouri/push_swap.git ; cd push_swap
+    $ make ; make bonus
 
 ## Directory Hierarchy
 ```
@@ -71,9 +84,6 @@
 |    |—— utils.c
 |    |—— utils2.c
 ```
-## :dart: About ##
-
-Describe your project
 
 ## :sparkles: Features ##
 
@@ -120,6 +130,6 @@ This project is under license from MIT. For more details, see the [LICENSE](LICE
 
 Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
 
-&#xa0; 
+&#xa0;
 
 <a href="#top">Back to top</a>
