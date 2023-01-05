@@ -52,43 +52,6 @@ Abstract:xxx
 |—— inc
 |    |—— push_swap.h
 |    |—— push_swap_bonus.h
-|—— jjjjjj
-|    |—— Makefile
-|    |—— README.md
-|    |—— includes
-|        |—— push_swap.h
-|    |—— obj
-|        |—— cost.o
-|        |—— do_move.o
-|        |—— initialization.o
-|        |—— input_check.o
-|        |—— input_check_utils.o
-|        |—— main.o
-|        |—— position.o
-|        |—— push.o
-|        |—— reverse_rotate.o
-|        |—— rotate.o
-|        |—— sort_tiny.o
-|        |—— stack.o
-|        |—— swap.o
-|        |—— utils.o
-|    |—— push_swap
-|    |—— src
-|        |—— cost.c
-|        |—— do_move.c
-|        |—— initialization.c
-|        |—— input_check.c
-|        |—— input_check_utils.c
-|        |—— main.c
-|        |—— position.c
-|        |—— push.c
-|        |—— reverse_rotate.c
-|        |—— rotate.c
-|        |—— sort.c
-|        |—— sort_tiny.c
-|        |—— stack.c
-|        |—— swap.c
-|        |—— utils.c
 |—— src
 |    |—— check_input.c
 |    |—— main.c
