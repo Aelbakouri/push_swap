@@ -23,28 +23,8 @@
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Aelbakouri/push_swap?color=brightgreen" />
 </p>
 
-<p align="center">
-  <a href="#dart-about">About</a> &#xa0; | &#xa0;
-  <a href="#directory-hierarchy">Directory Hierarchy</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">Author</a>
-</p>
 
 <br>
-
-## About ##
-
->### Status:
-     Finished 05/01/2023 grade: 125%
-
->### Usage:
-    Git clone the repository and cd into it. Then use make to compile
-    $ git clone git@github.com:Aelbakouri/push_swap.git ; cd push_swap
-    $ make ; make bonus
-
 
 ## Introduction
 
@@ -66,7 +46,7 @@ This project comprises an interesting case study regarding sorting algorithms an
 
 The main objective of the `push_swap` is to print to `STDOUT` the instructions required to sort the **stack A**, which must be given as the program's argument. Each instruction must be followed by a line break (`\n`). The **stack A** must be sorted with its lowest element at the top, while **stack B** must be empty.
 
-```shell
+```bash
 $ ARG='4 0 1 3 2'; ./push_swap $ARG
 
 pb
@@ -78,8 +58,30 @@ pa
 ra
 ```
 
-## Directory Hierarchy
+
+### The Checker Program
+
+To help identify if a set of instructions is valid or not, you can run the `checker` program with the same stack as the `push_swap` program. The `checker` program will then accept the sorting instructions on `STDIN`, giving us the result `OK`, if the stack was indeed sorted, or `KO` otherwise.
+
+
+```bash
+$ ARG='4 0 1 3 2'; ./push_swap $ARG | ./checker $ARG
+
+OK
 ```
+
+Both the `checker` or `push_swap` executables will result in an error if a stack has non-numerical arguments, a number is repeated or if a number is out of the 8-bit integer range.
+
+---
+
+## Compilation
+
+You must have installed `make` and `clang` to compile this project. The execution of the `make` command will generate the binaries for both `checker` and `push_swap` and the libraries needed to the compilation.
+
+---
+
+## Directory Hierarchy
+```shell
 |—— Makefile
 |—— bonus
 |    |—— check_input.c
@@ -106,52 +108,41 @@ ra
 |    |—— utils.c
 |    |—— utils2.c
 ```
+>### Status:
+     Finished 05/01/2023 grade: 125%
 
-## :sparkles: Features ##
+>### Usage: Git clone the repository and cd into it. Then use make to compile
+    $ git clone git@github.com:Aelbakouri/push_swap.git ; cd push_swap
+    $ make ; make bonus
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
 
-## :rocket: Technologies ##
 
-The following tools were used in this project:
-
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-
-## :white_check_mark: Requirements ##
-
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
-
-## :checkered_flag: Starting ##
+## Starting ##
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/1337_cursus
+$ git clone git@github.com:Aelbakouri/push_swap.git
 
 # Access
-$ cd 1337_cursus
+$ cd push_swap
 
-# Install dependencies
-$ yarn
+# Compilation
+$ make
 
 # Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
+$ $ ARG='4 0 1 3 2'; ./push_swap $ARG
+pb
+pb
+sa
+ra
+pa
+pa
+ra
 ```
 
-## :memo: License ##
-
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/Aelbakouri" target="_blank">Aelbakouri</a>
 
 &#xa0;
-
 <a href="#top">Back to top</a>
