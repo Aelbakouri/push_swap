@@ -35,13 +35,6 @@
 
 <br>
 
-## Status
-Finished 05/09/2022. Grade: 100%
-
-## Usage
-
-Git clone the repository and cd into it. Then use ```make``` to compile
-
 ## About ##
 
 This project is the implementation of Quick Sort program which is made of Stack Sort algorithm. Only 2 stacks and 11 rules enabled to make elements ascending orders.
@@ -52,9 +45,10 @@ This project is the implementation of Quick Sort program which is made of Stack 
 <br>
 
 >### Usage:
-    Git clone the repository and cd into it. Then use ```make``` to compile
+    Git clone the repository and cd into it. Then use make to compile
     $ git clone git@github.com:Aelbakouri/push_swap.git ; cd push_swap
     $ make ; make bonus
+
 
 ## Directory Hierarchy
 ```
