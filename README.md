@@ -6,35 +6,6 @@
   <!-- <a href="https://1337_cursus.netlify.app">Demo</a> -->
 </div>
 
-## Directory Hierarchy
-```
-|—— Makefile
-|—— bonus
-|    |—— check_input.c
-|    |—— checker_bonus.c
-|    |—— operations.c
-|    |—— operations2.c
-|    |—— stack.c
-|    |—— string_utils.c
-|    |—— string_utils2.c
-|    |—— utils.c
-|—— inc
-|    |—— push_swap.h
-|    |—— push_swap_bonus.h
-|—— src
-|    |—— check_input.c
-|    |—— main.c
-|    |—— move.c
-|    |—— operations.c
-|    |—— operations2.c
-|    |—— position.c
-|    |—— sort.c
-|    |—— stack.c
-|    |—— string_utils.c
-|    |—— utils.c
-|    |—— utils2.c
-```
-
 <h1 align="center">1337_cursus</h1>
 
 <p align="center">
