@@ -75,7 +75,6 @@
 
 Describe your project
 
-
 ## :sparkles: Features ##
 
 :heavy_check_mark: Feature 1;\
