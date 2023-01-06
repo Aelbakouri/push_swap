@@ -11,8 +11,8 @@ SRC = ./src/check_input.c ./src/main.c ./src/move.c ./src/operations2.c \
 
 OBJ = $(SRC:c=o)
 
-SRCB = ./bonus/check_input.c  ./bonus/operations2.c  ./bonus/stack.c ./bonus/string_utils2.c\
-	./bonus/operations.c ./bonus/utils.c  ./bonus/checker_bonus.c ./bonus/string_utils.c\
+SRCB = ./bonus/check_input.c ./bonus/operations2.c ./bonus/stack.c ./bonus/string_utils2.c\
+	./bonus/operations.c ./bonus/utils.c ./bonus/checker_bonus.c ./bonus/string_utils.c\
 
 OBJB = $(SRCB:c=o)
 

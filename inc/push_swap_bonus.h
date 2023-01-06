@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 15:04:42 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/01 15:42:38 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/06 11:22:01 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ size_t		ft_strlen(const char *str);
 char		*ft_strjoin(char *s1, char *s2);
 int			str_ncmp(char *str1, char *str2, int n);
 
-/* ultils */
+/* ultils  */
 
 void		free_stack(t_list **stack);
 void		exit_error(t_list **stack_a, t_list **stack_b);

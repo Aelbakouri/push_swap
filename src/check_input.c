@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 15:00:29 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/05 14:43:29 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/06 11:21:53 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	arg_is_nb(char *arg)
  *	Check if the string is zero a 0 to avoid 0 +0 -0 duplicates
  *	and 0 0000 +000 -00000000 too.
  *	return 1 if the argument is zero, 0 if contain
- *	anything else than a zero.
+ *	anything else than a zero .
  *	or you can handel it with atoi();
 */
 static int	is_zero(char *av)

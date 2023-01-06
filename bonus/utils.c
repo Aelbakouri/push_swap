@@ -6,7 +6,7 @@
 /*   By: ael-bako <ael-bako@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:52:15 by ael-bako          #+#    #+#             */
-/*   Updated: 2023/01/03 11:19:29 by ael-bako         ###   ########.fr       */
+/*   Updated: 2023/01/06 11:22:51 by ael-bako         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,17 +75,17 @@ char	**fill_tab(char **av, int *size, int ac)
 long int	ft_atoi(const char *str)
 {
 	long int	nb;
-	int			isneg;
+	int			sign;
 	int			i;
 
 	nb = 0;
-	isneg = 1;
+	sign = 1;
 	i = 0;
 	if (str[i] == '+')
 		i++;
 	else if (str[i] == '-')
 	{
-		isneg *= -1;
+		sign *= -1;
 		i++;
 	}
 	while (is_digit(str[i]))
@@ -93,5 +93,5 @@ long int	ft_atoi(const char *str)
 		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}
-	return (nb * isneg);
+	return (nb * sign);
 }
